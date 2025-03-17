@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body style="justify-content: center; align-items: center;">
+    <div class="container">
+        <div class="edit-header">
+            Customize
+        </div>
+        <div class="edit-box">
+            <div class="controls">
+                <div class="c-head">
+                    Filters
+                </div>
+                <div class="options">
+                    <div id="brightness" class="option">Brightness</div>
+                    <div id="saturation" class="option">Saturation</div>
+                    <div id="inversion" class="option">Inversion</div>
+                    <div id="grayscale" class="option">Grayscale</div>
+                </div>
+                <div class="gray">
+                    <p id="change-sketch">Grayscale</p>
+                    <p id="scale">100%</p>
+                </div>
+                <input type="range" min="0" max="200" class="range">
+                <div class="rotate">Rotate & Flip</div>
+                <div class="rotate-control">
+                     <div id="rotate-right" class="rotate-box">
+                        <i class="fa-solid fa-rotate-right fa-2xl"></i>
+                     </div>
+                     <div id="rotate-left" class="rotate-box">
+                        <i class="fa-solid fa-rotate-right fa-flip-horizontal fa-2xl"></i>
+                     </div>
+                     <div id="flip-vertical" class="rotate-box">
+                        <img src="sources/flip.png" class="icon" alt="">
+                     </div>
+                     <div id="flip-horizontal" class="rotate-box">
+                        <img src="sources/flip (1).png" class="icon" alt="">
+                     </div>
+                </div>
+            </div>
+            <div class="display-image">
+       <img src="source/icon-person.svg" class="displayed-image" alt="">
+            </div>
+        </div>
+        <div class="final-path">
+        <div class="final-buttons" id="choose-image">Back</div>
+        <div class="final-buttons" id="resetAll">Reset Filters</div>
+        <input type="file" class="img-hidden" accept="image/* , video/*" hidden>
+        <div class="final-buttons" id="save-img">Next</div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

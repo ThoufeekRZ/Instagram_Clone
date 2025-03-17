@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <video id="story-play" src="" width="40%" height="90%"  autoplay></video>
+    <script>
+        
+
+        let video = document.getElementById("story-play");
+
+        // Function to get query parameters
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('video'); // Get the 'video' parameter
+        }
+
+        // Set the video source if it exists
+        const videoSrc = getQueryParams();
+        if (videoSrc) {
+            video.src = decodeURIComponent(videoSrc); 
+            video.onended=()=>{
+                window.location.href="instagram.html"
+            }
+            video.addEventListener("click",()=>{
+                if(video.paused){
+                    video.play()
+                }
+                else{
+                    video.pause()
+                }
+            })
+            video.play();
+        }
+
+    </script>
+</body>
+
+</html>
